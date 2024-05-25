@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <header>
-      <h1>FortiSec - Solutions</h1>
+      <img src="/assets/images/Logo-FortiSec-Solutions.png" alt="FortiSec - Solutions" className="logo" />
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
@@ -17,3 +17,4 @@ function Header() {
 }
 
 export default Header;
+
