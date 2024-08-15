@@ -1,0 +1,17 @@
+/* AboutUs.css: Styles specific to the About Us component */
+/* App.css: General App container styles */
+#about-us {
+    margin-bottom: 2rem;
+  }
+  
+  #about-us h2 {
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  #about-us p {
+    color: #666;
+    font-size: 1.2rem;
+  }
+  
+  

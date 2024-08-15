@@ -1,0 +1,140 @@
+/* Global styles */
+
+/* Tamaño de fuente base y estilos generales */
+html {
+  font-size: 120%; /* Incrementa el tamaño de la fuente base */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem; /* 1rem será ahora 110% del tamaño base */
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* Estilos para el video de fondo */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para la barra superior (header) */
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem; /* Ajustado con unidades rem */
+  box-sizing: border-box;
+  z-index: 1;
+  width: 100%;
+}
+
+header .logo {
+  max-height: 230%;
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 3rem; /* Ajusta con unidades rem */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #9FA044;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0.2rem;
+  display: block;
+  margin-top: 0.5rem;
+  right: 0;
+  background: #9FA044;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #9FA044;
+}
+
+/* Estilos para la barra final (footer) */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  bottom: 0; /* Ajusta la posición del footer */
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Espacio adicional para el footer */
+main {
+  padding: 1rem;
+  padding-bottom: 5rem; /* Espacio adicional para que el footer no se superponga al contenido */
+  position: relative;
+  z-index: 1;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 1200px) {
+  html {
+    font-size: 105%;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 95%;
+  }
+
+  nav li {
+    margin-right: 1rem;
+  }
+}
+
