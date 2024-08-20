@@ -1,10 +1,13 @@
 import React from 'react';
+import '../styles/Home.css';
 
 function Home() {
   return (
     <section id="home">
-      <h2>Welcome to My Website</h2>
-      <p>This is a simple, informative website created using React.</p>
+      <div className="content">
+        <h2>¿Alguna vez te has cuestionado si tus datos están realmente protegidos?</h2>
+        <button>¡Quiero saber más!</button>
+      </div>
     </section>
   );
 }

@@ -7,10 +7,11 @@ function Header() {
       <img src="/assets/images/Logo-FortiSec-Solutions.png" alt="FortiSec - Solutions" className="logo" />
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about-us">About Us</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/about-us">Nosotros</Link></li>
+          <li><Link to="/services">Servicios</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/contact">Contacto</Link></li>
         </ul>
       </nav>
     </header>
