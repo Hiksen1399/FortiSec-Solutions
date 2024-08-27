@@ -50,21 +50,21 @@ function Home() {
           <h3>Informarte</h3>
           <p>Proveemos la información esencial y actualizada sobre las mejores prácticas de seguridad.</p>
           <div className="image-container">
-            <img src="ruta/de/tu/imagen1.jpg" alt="Informarte" />
+            <img src="./assets/images/informarte.png" alt="Informarte" />
           </div>
         </div>
         <div className="card">
           <h3>Asesorarte</h3>
           <p>Brindamos asesoramiento personalizado para identificar y mitigar vulnerabilidades.</p>
           <div className="image-container">
-            <img src="ruta/de/tu/imagen2.jpg" alt="Asesorarte" />
+            <img src="./assets/images/asesorarte.png" alt="Asesorarte" />
           </div>
         </div>
         <div className="card">
           <h3>Apoyarte</h3>
           <p>Implementamos soluciones robustas para prevenir ciberataques y proteger tu valiosa información.</p>
           <div className="image-container">
-            <img src="ruta/de/tu/imagen3.jpg" alt="Apoyarte" />
+            <img src="./assets/images/apoyarte.png" alt="Apoyarte" />
           </div>
         </div>
       </div>
