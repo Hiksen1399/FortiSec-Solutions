@@ -17,8 +17,8 @@ function Footer() {
           <div className="new-footer-text">
             <h3>¡MANTENTE AL DÍA DE NUEVAS NOTICIAS!</h3>
             <form className="new-footer-form">
-              <input type="email" placeholder="Enter your email" />
-              <button type="submit">Subscribe</button>
+              <input type="email" placeholder="Introduce tu correo electronico!" />
+              <button type="submit">Suscribirme</button>
             </form>
           </div>
         </div>

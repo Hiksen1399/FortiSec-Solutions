@@ -1,17 +1,139 @@
-/* AboutUs.css: Styles specific to the About Us component */
-/* App.css: General App container styles */
-#about-us {
-    margin-bottom: 2rem;
-  }
-  
-  #about-us h2 {
-    color: #333;
-    font-size: 2rem;
-  }
-  
-  #about-us p {
-    color: #666;
-    font-size: 1.2rem;
-  }
-  
-  
+/* Estilo para la sección "About Us" */
+.about-us-section {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.about-us-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+/* Mantén el efecto de escritura solo para párrafos con clase .about-us-text */
+.about-us-text {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  background-color: rgba(33, 33, 33, 0.8);
+  max-width: 80%;
+  z-index: 3;
+  position: relative;
+  white-space: pre-wrap;
+}
+
+/* Estilo para las líneas blancas solo en .about-us-text */
+.about-us-text::before, .about-us-text::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin: 0.5rem 0;
+}
+
+.about-us-text::before {
+  margin-bottom: 1.5rem;
+}
+
+.about-us-text::after {
+  margin-top: 1.5rem;
+}
+
+/* Estilo para el subtítulo de Misión y Visión */
+.about-us-section .commitment-section-2 {
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin: 2rem 0; /* Reduce el margen vertical para que no esté tan separado del contenido */
+  padding: 0 2rem; /* Añade un padding horizontal para evitar que el texto quede pegado a los bordes */
+  max-width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho posible */
+}
+
+.about-us-section .commitment-section-2 p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  max-width: 600px; /* Define un ancho máximo para el párrafo */
+  margin: 0; /* Elimina cualquier margen por defecto que pueda estar aplicando el estilo global */
+}
+
+/* Sección de Misión y Visión */
+.about-us-section .mission-vision-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-us-section .mission-vision-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-us-section .mission-vision-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.about-us-section .mission-vision-cards {
+  display: flex;
+  justify-content: space-between; /* Usa space-between para que los elementos se distribuyan a lo largo del contenedor */
+  align-items: center;
+  gap: 3rem; /* Aumenta el espacio entre las cartas */
+}
+
+.about-us-section .card {
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%; /* Cambia a 100% para que se ajuste al contenedor padre */
+  max-width: 350px; /* Define un ancho máximo más amplio */
+  text-align: center;
+}
+
+.about-us-section .card h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.about-us-section .card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.about-us-section .card img {
+  max-width: 50px;
+  height: auto;
+}
