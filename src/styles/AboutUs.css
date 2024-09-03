@@ -8,7 +8,7 @@
   align-items: center;
   z-index: 2;
   padding: 0 2rem;
-  text-align: center;
+  text-align: center; /* Mantén el contenido centrado por defecto */
 }
 
 .about-us-section h2 {
@@ -59,11 +59,14 @@
 
 /* Estilo para el subtítulo de Misión y Visión */
 .about-us-section .commitment-section-2 {
-  text-align: left; /* Alinea el texto a la izquierda */
-  margin: 2rem 0; /* Reduce el margen vertical para que no esté tan separado del contenido */
-  padding: 0 2rem; /* Añade un padding horizontal para evitar que el texto quede pegado a los bordes */
-  max-width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho posible */
+  text-align: left; /* Alinea el subtítulo a la izquierda */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  padding: 0 2rem; /* Padding en los lados */
+  margin: 2rem auto; /* Centrará la sección con un margen automático */
+  max-width: 1000px; /* Controla el ancho máximo del contenedor */
+  margin-left: 2rem; /* Ajusta esta propiedad para mover el subtítulo más a la izquierda */
 }
+
 
 .about-us-section .commitment-section-2 p {
   font-family: 'Inter', sans-serif;
@@ -73,7 +76,7 @@
   background-color: rgba(33, 33, 33, 0.8);
   padding: 1rem 1rem;
   border-radius: 10px;
-  max-width: 600px; /* Define un ancho máximo para el párrafo */
+  max-width: 350px; /* Define un ancho máximo para el párrafo */
   margin: 0; /* Elimina cualquier margen por defecto que pueda estar aplicando el estilo global */
 }
 
@@ -103,18 +106,22 @@
 
 .about-us-section .mission-vision-cards {
   display: flex;
-  justify-content: space-between; /* Usa space-between para que los elementos se distribuyan a lo largo del contenedor */
-  align-items: center;
-  gap: 3rem; /* Aumenta el espacio entre las cartas */
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
 }
 
 .about-us-section .card {
   background-color: rgba(33, 33, 33, 0.8);
   padding: 1.5rem;
   border-radius: 10px;
-  width: 100%; /* Cambia a 100% para que se ajuste al contenedor padre */
-  max-width: 350px; /* Define un ancho máximo más amplio */
+  width: calc(33.333% - 2rem);
+  max-width: 1000px;
+  box-sizing: border-box;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .about-us-section .card h4 {
@@ -133,7 +140,128 @@
   margin-bottom: 1.5rem;
 }
 
+.image-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
 .about-us-section .card img {
-  max-width: 50px;
-  height: auto;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+/* Estilo para la sección de valores */
+.values-section {
+  text-align: left; /* Alinea el subtítulo a la izquierda */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  padding: 0 2rem; /* Padding en los lados */
+  margin: 2rem auto; /* Centrará la sección con un margen automático */
+  max-width: 1000px; /* Controla el ancho máximo del contenedor */
+  margin-left: 2rem; /* Ajusta esta propiedad para mover el subtítulo más a la izquierda */
+}
+
+.values-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 350px;
+  margin: 0 0 2rem 0;
+}
+
+.values-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+.value-card {
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.value-card h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 0;
+  max-width: 60%; /* Asegura que el texto no ocupe demasiado espacio y haya espacio suficiente para la imagen */
+}
+
+.value-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 0;
+}
+
+.value-card .image-container {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value-card img {
+  max-width: 80px;
+  margin-left: 1rem;
+  border-radius: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .cards-section,
+  .values-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .value-card {
+    width: 80%;
+    flex-direction: column; /* Cambia la disposición de los elementos a una columna en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .value-card img {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-text {
+    font-size: 1.2rem;
+  }
+
+  .commitment-section-2 p,
+  .values-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .card h3,
+  .value-card h4 {
+    font-size: 1rem;
+  }
+
+  .card p,
+  .value-card p {
+    font-size: 0.9rem;
+  }
 }

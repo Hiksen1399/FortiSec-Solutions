@@ -53,9 +53,37 @@ function AboutUs() {
         </div>
         <div className="card">
           <h3>Visión</h3>
-          <p>Ser reconocidos como la empresa líder en seguridad de la información, innovando continuamente para enfrentar nuevas amenazas digitales.</p>
+          <p>Ser reconocidos como organización líder en seguridad de la información, innovando continuamente para enfrentar nuevas amenazas digitales.</p>
           <div className="image-container">
             <img src="./assets/images/vision.png" alt="Visión" />
+          </div>
+        </div>
+      </div>
+
+      {/* Nueva sección de valores */}
+      <div className="values-section">
+        <h3>Nuestros Valores</h3>
+        <div className="values-cards">
+          <div className="value-card">
+            <h4>Integridad:</h4>
+            <p>Actuamos con honestidad y transparencia en todo lo que hacemos.</p>
+            <div className="image-container">
+              <img src="./assets/images/integridad.png" alt="Integridad" />
+            </div>
+          </div>
+          <div className="value-card">
+            <h4>Innovación:</h4>
+            <p>Estamos a la vanguardia de las nuevas tecnologías y métodos en ciberseguridad.</p>
+            <div className="image-container">
+              <img src="./assets/images/innovacion.png" alt="Innovación" />
+            </div>
+          </div>
+          <div className="value-card">
+            <h4>Compromiso:</h4>
+            <p>Dedicados a la protección y satisfacción de nuestros clientes.</p>
+            <div className="image-container">
+              <img src="./assets/images/compromiso.png" alt="Compromiso" />
+            </div>
           </div>
         </div>
       </div>
