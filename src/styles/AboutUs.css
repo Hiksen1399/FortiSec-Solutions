@@ -151,14 +151,26 @@
   border-radius: 10px;
 }
 
+
+/* Efecto de transición para la sección de valores */
+.values-cards {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-activated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Estilo para la sección de valores */
 .values-section {
   text-align: left; /* Alinea el subtítulo a la izquierda */
   width: 100%; /* Asegura que ocupe todo el ancho disponible */
   padding: 0 2rem; /* Padding en los lados */
   margin: 2rem auto; /* Centrará la sección con un margen automático */
-  max-width: 1000px; /* Controla el ancho máximo del contenedor */
-  margin-left: 2rem; /* Ajusta esta propiedad para mover el subtítulo más a la izquierda */
+  max-width: 1200px; /* Controla el ancho máximo del contenedor */
 }
 
 .values-section h3 {
@@ -169,29 +181,30 @@
   background-color: rgba(33, 33, 33, 0.8);
   padding: 1rem;
   border-radius: 10px;
-  max-width: 350px;
+  max-width: 239px;
   margin: 0 0 2rem 0;
 }
 
 .values-cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   gap: 2rem;
-  flex-wrap: wrap;
-  padding: 0 2rem;
+  justify-content: center; /* Centra los cuadros horizontalmente */
+  align-items: center; /* Centra los cuadros verticalmente */
 }
 
 .value-card {
   background-color: rgba(33, 33, 33, 0.8);
   padding: 1.5rem;
   border-radius: 10px;
-  width: 100%;
-  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  box-sizing: border-box;
+  min-height: 200px;
+  width: 100%; /* Asegura que todos los cuadros tengan el mismo ancho */
+  max-width: 600px; /* Ajusta el ancho máximo si es necesario */
 }
 
 .value-card h4 {
@@ -199,12 +212,15 @@
   font-weight: 600;
   font-size: 1.2rem;
   color: white;
-  margin-bottom: 0;
-  max-width: 60%; /* Asegura que el texto no ocupe demasiado espacio y haya espacio suficiente para la imagen */
+  margin-bottom: 0.5rem;
+  max-width: 60%;
 }
 
 .value-card p {
   font-family: 'Inter', sans-serif;
+  justify-content: center; /* Centra el contenido dentro del cuadro */
+  text-align: center; /* Centra el texto y la imagen */
+  align-self: center; /* Centra el cuadro en la grilla */
   font-size: 1rem;
   font-weight: 400;
   color: white;
@@ -224,18 +240,25 @@
   border-radius: 10px;
 }
 
+/* Distribución para el tercer cuadro (Compromiso) */
+.value-card:nth-child(3) {
+  grid-column: 1 / span 2; /* Ocupa ambas columnas */
+  justify-content: center; /* Centra el contenido dentro del cuadro */
+  text-align: center; /* Centra el texto y la imagen */
+  align-self: center; /* Centra el cuadro en la grilla */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Asegura que el cuadro tenga el mismo tamaño que los otros */
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
-  .cards-section,
   .values-cards {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
   }
 
-  .card,
   .value-card {
-    width: 80%;
-    flex-direction: column; /* Cambia la disposición de los elementos a una columna en pantallas pequeñas */
+    flex-direction: column; /* Cambia la disposición de los cuadros en pantallas pequeñas */
     text-align: center;
   }
 

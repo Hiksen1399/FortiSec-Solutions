@@ -19,12 +19,19 @@ function AboutUs() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const section = document.querySelector('.cards-section');
-      const sectionPosition = section.getBoundingClientRect().top;
+      const cardsSection = document.querySelector('.cards-section');
+      const valuesSection = document.querySelector('.values-cards');
+      
+      const sectionPosition = cardsSection.getBoundingClientRect().top;
+      const valuesSectionPosition = valuesSection.getBoundingClientRect().top;
       const screenPosition = window.innerHeight;
 
       if (sectionPosition < screenPosition) {
-        section.classList.add('scroll-activated');
+        cardsSection.classList.add('scroll-activated');
+      }
+
+      if (valuesSectionPosition < screenPosition) {
+        valuesSection.classList.add('scroll-activated');
       }
     };
 
