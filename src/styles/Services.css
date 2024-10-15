@@ -1,0 +1,109 @@
+/* Sección de servicios */
+.services-section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+  
+.services-section h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2rem;
+    background-color: rgba(33, 33, 33, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+/* Tarjetas de servicios */
+.services-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+  
+.service-card {
+    background-color: rgba(33, 33, 33, 0.8);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 280px;
+    width: 650px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Líneas superiores e inferiores */
+.service-card::before, .service-card::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 1rem 0;
+}
+  
+.scroll-activated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Título del servicio */
+.service-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    text-align: left; /* Mueve el título a la izquierda */
+    margin-bottom: 1rem;
+    width: 100%;
+}
+  
+/* Contenido del servicio */
+.service-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-align: left; /* Alinea el contenido a la izquierda */
+    margin-top: 1rem;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* Icono del servicio */
+.service-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.service-icon img {
+    max-width: 80px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .services-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .service-icon {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+}
