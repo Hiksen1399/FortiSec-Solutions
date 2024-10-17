@@ -1,7 +1,8 @@
 /* Sección de servicios */
 .services-section {
-    padding: 3rem 1rem;
+    padding: 0;
     text-align: center;
+    margin-left: -0.3rem;
 }
   
 .services-section h2 {
@@ -23,7 +24,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    justify-items: center;
+    justify-items: start; /* Cambia a start para alinear las tarjetas a la izquierda */
+    padding-left: 0rem;
 }
   
 .service-card {
