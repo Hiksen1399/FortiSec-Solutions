@@ -8,6 +8,7 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import Blog from './components/Blog'; // Importa el componente Blog
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} /> {/* Ruta para el blog */}
             </Routes>
           </main>
           <Footer />
@@ -38,4 +40,3 @@ function App() {
 }
 
 export default App;
-
