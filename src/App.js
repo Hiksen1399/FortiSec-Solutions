@@ -8,7 +8,8 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 import Contact from './components/Contact';
-import Blog from './components/Blog'; // Importa el componente Blog
+import Blog from './components/Blog';
+import BlogPost from './components/BlogPost'; // Importa el componente Blog
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} /> {/* Ruta para el blog */}
+              <Route path="/blog/:id" element={<BlogPost />} />
             </Routes>
           </main>
           <Footer />
