@@ -6,18 +6,40 @@
   justify-content: space-between;
 }
 
+.breadcrumb {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+
+.breadcrumb a, .breadcrumb span {
+  color: #9FA044;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
 .blog-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  position: relative;
 }
 
 .left-section {
-  width: 70%; /* Sección de los blogs */
+  width: 65%; /* Ajustamos el ancho de la sección de los blogs */
 }
 
 .right-section {
-  width: 25%; /* Sección de búsqueda y temas */
+  width: 30%; /* Ajustamos el ancho de la sección de búsqueda y temas */
 }
 
 h2 {
@@ -30,21 +52,24 @@ h2 {
 
 .blog-post {
   display: flex;
+  align-items: center; /* Alineamos los elementos horizontalmente */
   background-color: rgba(33, 33, 33, 0.8);
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
+  border-bottom: 2px solid white; /* Línea blanca horizontal debajo de cada blog */
 }
 
 .blog-image {
   width: 150px;
   height: 150px;
-  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  object-fit: cover;
   border-radius: 8px;
-  margin-right: 1.5rem;
+  margin-right: 1.5rem; /* Espacio entre la imagen y el contenido */
 }
 
 .blog-details {
+  flex: 1; /* Para que el contenido ocupe el resto del espacio disponible */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -54,7 +79,7 @@ h2 {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-style: italic;
-  color: #9acd32;
+  color: #9FA044;
   margin-bottom: 0.5rem;
 }
 
@@ -67,7 +92,7 @@ h2 {
 }
 
 .blog-topics li:hover {
-  color: #9acd32;
+  color: #9FA044;
 }
 
 .blog-details h3 {
@@ -81,6 +106,7 @@ h2 {
   font-size: 1rem;
   color: #ccc;
   margin: 0.5rem 0;
+  text-align: left; /* Alineamos el texto a la izquierda */
 }
 
 .search-bar {
@@ -100,7 +126,7 @@ h2 {
   padding: 0.5rem;
   border-radius: 0 5px 5px 0;
   border: none;
-  background-color: #9acd32;
+  background-color: #9FA044;
   color: white;
   font-family: 'Inter', sans-serif;
 }
@@ -129,6 +155,6 @@ h2 {
 }
 
 .recent-posts li:hover, .blog-topics li:hover {
-  color: #9acd32;
+  color: #9FA044;
   cursor: pointer;
 }
