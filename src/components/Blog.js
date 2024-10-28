@@ -96,18 +96,18 @@ function Blog() {
       <div className="blog-content">
         <div className="left-section">
           <h2 onClick={handleRefreshBlog}>Blog</h2>
-          {filteredPosts.length ? filteredPosts.map(post => (
-            <div key={post.id} className="blog-post">
+          {filteredPosts.length ? filteredPosts.map((post, index) => (
+            <div key={post.id} className="blog-post" style={{ maxWidth: '100%' }}>
               <img src={extractFirstImage(post.content)} alt={post.title} className="blog-image" />
               <div className="blog-details">
                 {post.labels && (
                   <span className="blog-category">{post.labels.join(', ')}</span>
                 )}
                 <h3>{post.title}</h3>
-                <p>{extractText(post.content).slice(0, 100)}...</p> {/* Se eliminan las etiquetas HTML */}
+                <p>{extractText(post.content).slice(0, 65)}...</p> {/* Limita el texto a 150 caracteres */}
                 <Link to={`/blog/${post.id}`}>Leer más</Link>
               </div>
-              <hr className="blog-divider" /> {/* Línea divisoria entre blogs */}
+              <hr className="blog-divider" />
             </div>
           )) : <p>No se encontraron resultados.</p>}
         </div>

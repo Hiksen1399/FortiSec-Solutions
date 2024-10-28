@@ -35,7 +35,7 @@
 }
 
 .left-section {
-  width: 65%; /* Ajustamos el ancho de la sección de los blogs */
+  width: 70%; /* Ajustamos el ancho de la sección de los blogs */
 }
 
 .right-section {
@@ -83,18 +83,6 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-.blog-topics li {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-}
-
-.blog-topics li:hover {
-  color: #9FA044;
-}
-
 .blog-details h3 {
   font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
@@ -107,6 +95,12 @@ h2 {
   color: #ccc;
   margin: 0.5rem 0;
   text-align: left; /* Alineamos el texto a la izquierda */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Prefijo para navegadores basados en Webkit */
+  line-clamp: 2; /* Propiedad estándar */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto se corta */
 }
 
 .search-bar {
