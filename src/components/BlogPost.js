@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/BlogPost.css';
 
@@ -32,11 +32,18 @@ function BlogPost() {
 
   return (
     <section id="blog-post">
+      {/* Breadcrumb para navegación */}
+      <nav className="breadcrumb">
+        <Link to="/blog">Blog</Link> <span>{'>'}</span> <span>{post ? post.title : 'Cargando...'}</span>
+      </nav>
+
       {post ? (
         <div>
           <h2>{post.title}</h2>
-          <p>Publicado el {new Date(post.published).toLocaleDateString()} por {post.author.displayName}</p>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <p className="post-info">
+            Publicado el {new Date(post.published).toLocaleDateString()} por {post.author.displayName}
+          </p>
+          <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
 
           {/* Formulario de comentarios */}
           <div className="comments-section">
@@ -67,7 +74,7 @@ function BlogPost() {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>Cargando...</p>
       )}
     </section>
   );
