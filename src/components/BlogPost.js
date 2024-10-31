@@ -6,6 +6,7 @@ import '../styles/BlogPost.css';
 function BlogPost() {
   const { id } = useParams();
   const [post, setPost] = useState(null);
+  const [comments, setComments] = useState([]);
   const [comment, setComment] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -16,23 +17,42 @@ function BlogPost() {
     const url = `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts/${id}?key=${apiKey}`;
 
     axios.get(url)
-      .then(response => {
-        setPost(response.data);
-      })
-      .catch(error => {
-        console.error("Error fetching the post:", error);
-      });
+      .then(response => setPost(response.data))
+      .catch(error => console.error("Error fetching the post:", error));
+
+    fetchComments(); // Llamamos a fetchComments al cargar el componente
   }, [id]);
+
+  const fetchComments = () => {
+    // Aquí puedes implementar la lógica para obtener los comentarios desde la API de Blogger o cualquier fuente de datos.
+    setComments([
+      { id: 1, name: "Usuario1", text: "Comentario de ejemplo 1" },
+      { id: 2, name: "Usuario2", text: "Comentario de ejemplo 2" }
+    ]);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Simular la adición del comentario al frontend inmediatamente
+    const newComment = {
+      id: comments.length + 1,
+      name,
+      text: comment
+    };
+    setComments([...comments, newComment]);
+
+    // Resetear los campos del formulario
+    setComment('');
+    setName('');
+    setEmail('');
+
+    // Aquí se puede implementar lógica adicional para conectar con un servidor intermediario si se desea almacenar el comentario de manera persistente
     console.log(`Comentario: ${comment}, Nombre: ${name}, Correo: ${email}`);
-    // Aquí puedes manejar el envío del comentario a tu base de datos o a Blogger.
   };
 
   return (
     <section id="blog-post">
-      {/* Breadcrumb para navegación */}
       <nav className="breadcrumb">
         <Link to="/blog">Blog</Link> <span>{'>'}</span> <span>{post ? post.title : 'Cargando...'}</span>
       </nav>
@@ -45,7 +65,16 @@ function BlogPost() {
           </p>
           <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
 
-          {/* Formulario de comentarios */}
+          <div className="existing-comments">
+            <h3>Comentarios</h3>
+            {comments.map((comment) => (
+              <div key={comment.id} className="comment">
+                <p><strong>{comment.name}:</strong> {comment.text}</p>
+                <button>Me gusta</button>
+              </div>
+            ))}
+          </div>
+
           <div className="comments-section">
             <h3>Dejanos saber tu Opinión!</h3>
             <form onSubmit={handleSubmit}>
