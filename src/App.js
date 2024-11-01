@@ -9,7 +9,8 @@ import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Blog from './components/Blog';
-import BlogPost from './components/BlogPost'; // Importa el componente Blog
+import BlogPost from './components/BlogPost';
+ // Importa el componente Blog
 
 function App() {
   return (

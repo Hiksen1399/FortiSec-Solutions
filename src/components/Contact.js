@@ -1,76 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import '../styles/Contact.css';
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    case: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form data:', formData);
-  };
-
   return (
     <section id="contact">
-      <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+      <h2 className="contact-title">Contáctanos</h2>
+      <div className="contact-box">
+        <p>Si quieres entrar en contacto o saber más de nosotros da click a los siguientes iconos</p>
+        <div className="contact-icons">
+          <a href="mailto:FortisecSolutions@gmail.com" target="_blank" rel="noopener noreferrer" className="contact-icon">
+            <FaEnvelope className="icon" /> FortisecSolutions@gmail.com
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact-icon">
+            <FaLinkedin className="icon" /> LinkedIn
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="contact-icon">
+            <FaInstagram className="icon" /> Instagram
+          </a>
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="phone">Phone:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="case">Case:</label>
-          <textarea
-            id="case"
-            name="case"
-            value={formData.case}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      </div>
     </section>
   );
 }
