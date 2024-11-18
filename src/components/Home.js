@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import '../styles/Home.css';
 
 function Home() {
+  const navigate = useNavigate(); // Inicializa useNavigate
+
   useEffect(() => {
     const handleScroll = () => {
       const midSection = document.querySelector('.mid-section');
       const cardsSection = document.querySelector('.cards-section');
-      
+
       const midPosition = midSection.getBoundingClientRect().top;
       const cardsPosition = cardsSection.getBoundingClientRect().top;
 
@@ -25,11 +28,15 @@ function Home() {
     };
   }, []);
 
+  const handleButtonClick = () => {
+    navigate('/contact'); // Redirige a la interfaz de contacto
+  };
+
   return (
     <section id="home">
       <div className="content">
         <h2>¿Alguna vez te has cuestionado si tus datos están realmente protegidos?</h2>
-        <button>¡Quiero saber más!</button>
+        <button onClick={handleButtonClick}>¡Quiero saber más!</button>
       </div>
 
       {/* Sección del párrafo en el medio */}
