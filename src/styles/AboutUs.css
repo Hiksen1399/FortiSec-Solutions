@@ -1,0 +1,290 @@
+/* Estilo para la sección "About Us" */
+.about-us-section {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 0 2rem;
+  text-align: center; /* Mantén el contenido centrado por defecto */
+}
+
+.about-us-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+/* Mantén el efecto de escritura solo para párrafos con clase .about-us-text */
+.about-us-text {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  background-color: rgba(33, 33, 33, 0.8);
+  max-width: 80%;
+  z-index: 3;
+  position: relative;
+  white-space: pre-wrap;
+}
+
+/* Estilo para las líneas blancas solo en .about-us-text */
+.about-us-text::before, .about-us-text::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin: 0.5rem 0;
+}
+
+.about-us-text::before {
+  margin-bottom: 1.5rem;
+}
+
+.about-us-text::after {
+  margin-top: 1.5rem;
+}
+
+/* Estilo para el subtítulo de Misión y Visión */
+.about-us-section .commitment-section-2 {
+  text-align: left; /* Alinea el subtítulo a la izquierda */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  padding: 0 2rem; /* Padding en los lados */
+  margin: 2rem auto; /* Centrará la sección con un margen automático */
+  max-width: 1000px; /* Controla el ancho máximo del contenedor */
+  margin-left: 2rem; /* Ajusta esta propiedad para mover el subtítulo más a la izquierda */
+}
+
+
+.about-us-section .commitment-section-2 p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  max-width: 350px; /* Define un ancho máximo para el párrafo */
+  margin: 0; /* Elimina cualquier margen por defecto que pueda estar aplicando el estilo global */
+}
+
+/* Sección de Misión y Visión */
+.about-us-section .mission-vision-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-us-section .mission-vision-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-us-section .mission-vision-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.about-us-section .mission-vision-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+.about-us-section .card {
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: calc(33.333% - 2rem);
+  max-width: 1000px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-us-section .card h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.about-us-section .card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.image-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-section .card img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+
+/* Efecto de transición para la sección de valores */
+.values-cards {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-activated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo para la sección de valores */
+.values-section {
+  text-align: left; /* Alinea el subtítulo a la izquierda */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  padding: 0 2rem; /* Padding en los lados */
+  margin: 2rem auto; /* Centrará la sección con un margen automático */
+  max-width: 1200px; /* Controla el ancho máximo del contenedor */
+}
+
+.values-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 239px;
+  margin: 0 0 2rem 0;
+}
+
+.values-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 2rem;
+  justify-content: center; /* Centra los cuadros horizontalmente */
+  align-items: center; /* Centra los cuadros verticalmente */
+}
+
+.value-card {
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 200px;
+  width: 100%; /* Asegura que todos los cuadros tengan el mismo ancho */
+  max-width: 600px; /* Ajusta el ancho máximo si es necesario */
+}
+
+.value-card h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  max-width: 60%;
+}
+
+.value-card p {
+  font-family: 'Inter', sans-serif;
+  justify-content: center; /* Centra el contenido dentro del cuadro */
+  text-align: center; /* Centra el texto y la imagen */
+  align-self: center; /* Centra el cuadro en la grilla */
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 0;
+}
+
+.value-card .image-container {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value-card img {
+  max-width: 80px;
+  margin-left: 1rem;
+  border-radius: 10px;
+}
+
+/* Distribución para el tercer cuadro (Compromiso) */
+.value-card:nth-child(3) {
+  grid-column: 1 / span 2; /* Ocupa ambas columnas */
+  justify-content: center; /* Centra el contenido dentro del cuadro */
+  text-align: center; /* Centra el texto y la imagen */
+  align-self: center; /* Centra el cuadro en la grilla */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Asegura que el cuadro tenga el mismo tamaño que los otros */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .values-cards {
+    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+  }
+
+  .value-card {
+    flex-direction: column; /* Cambia la disposición de los cuadros en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .value-card img {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-text {
+    font-size: 1.2rem;
+  }
+
+  .commitment-section-2 p,
+  .values-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .card h3,
+  .value-card h4 {
+    font-size: 1rem;
+  }
+
+  .card p,
+  .value-card p {
+    font-size: 0.9rem;
+  }
+}

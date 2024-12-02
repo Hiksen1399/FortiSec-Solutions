@@ -1,0 +1,73 @@
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrado vertical de la sección */
+    height: 50vh;
+    color: #9FA044;
+}
+
+.contact-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #9FA044;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-box {
+    background-color: rgba(33, 33, 33, 0.9);
+    border: 2px solid #9FA044;
+    padding: 2.5rem 3rem; /* Más espacio de padding */
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
+    max-width: 950px; /* Ancho máximo ajustado para más espacio */
+    width: 85%; /* Ajuste para adaptarse a la pantalla */
+    text-align: left; /* Alineación a la izquierda */
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(255, 215, 0, 0.8);
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: flex-start; /* Alineación a la izquierda de los iconos */
+    gap: 5rem; /* Más espacio entre los iconos */
+    margin-top: 2rem;
+}
+
+.contact-icon {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0rem; /* Más espacio entre el icono y el texto */
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+.icon {
+    font-size: 2.1rem; /* Tamaño de los iconos ajustado */
+    margin-right: 1rem; /* Más espacio lateral entre el icono y el texto */
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+    color: #9FA044;
+}
+
+.contact-icon:hover .icon {
+    transform: scale(1.1);
+}

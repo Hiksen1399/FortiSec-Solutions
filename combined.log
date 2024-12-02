@@ -1,0 +1,32 @@
+{"level":"info","message":"Servidor HTTPS ejecutándose en https://localhost:5000","timestamp":"2024-11-18T18:27:18.279Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T18:27:19.014Z"}
+{"level":"info","message":"Servidor HTTPS ejecutándose en https://localhost:5000","timestamp":"2024-11-18T18:28:02.730Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T18:28:02.757Z"}
+{"level":"info","message":"Servidor HTTPS ejecutándose en https://localhost:5000","timestamp":"2024-11-18T18:41:46.067Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T18:41:46.096Z"}
+{"level":"info","message":"Servidor HTTPS ejecutándose en https://localhost:5000","timestamp":"2024-11-18T18:46:47.601Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T18:46:47.673Z"}
+{"level":"info","message":"Servidor HTTPS ejecutándose en https://localhost:5000","timestamp":"2024-11-18T18:53:16.796Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T18:53:16.923Z"}
+{"level":"info","message":"Servidor HTTPS ejecutándose en https://localhost:5000","timestamp":"2024-11-18T18:55:32.630Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T18:55:32.658Z"}
+{"level":"info","message":"Servidor HTTPs ejecutándose en https://localhost:5000","timestamp":"2024-11-18T19:03:04.728Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T19:03:04.756Z"}
+{"level":"info","message":"Servidor HTTPs ejecutándose en https://localhost:5000","timestamp":"2024-11-18T19:04:38.225Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T19:04:38.255Z"}
+{"level":"info","message":"Servidor HTTPs ejecutándose en https://localhost:5002","timestamp":"2024-11-18T19:09:07.094Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T19:09:07.121Z"}
+{"level":"info","message":"Servidor HTTP ejecutándose en http://localhost:5002","timestamp":"2024-11-18T19:13:20.193Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T19:13:20.220Z"}
+{"level":"info","message":"Servidor HTTP ejecutándose en http://localhost:5002","timestamp":"2024-11-18T19:19:26.310Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T19:19:26.351Z"}
+{"level":"info","message":"Servidor HTTP ejecutándose en http://localhost:5002","timestamp":"2024-11-18T19:21:43.282Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T19:21:43.317Z"}
+{"level":"info","message":"Correo cifrado: 1e9eff65570e2a2e05a6bdd098054058:91efc990cb8e3eda6b2317e6427c792e56ff107f00bdd400464be6635e643093","timestamp":"2024-11-18T19:21:57.580Z"}
+{"level":"info","message":"Correo electrónico suscrito con éxito: usuario@dominio.com","timestamp":"2024-11-18T19:21:57.586Z"}
+{"level":"info","message":"Servidor HTTP ejecutándose en http://localhost:5001","timestamp":"2024-11-18T19:26:46.672Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T19:26:46.705Z"}
+{"level":"info","message":"Servidor HTTP ejecutándose en http://localhost:5000","timestamp":"2024-11-18T19:28:41.520Z"}
+{"level":"info","message":"Conectado a la base de datos MySQL","timestamp":"2024-11-18T19:28:41.554Z"}
+{"level":"info","message":"Correo cifrado: 380b2677a6d8c7cc9f72cfa1afeb5d97:b37b69232ec36a75d02b9b1433406d79f0bce7de4d5b4807def2a8936dedd62e","timestamp":"2024-11-18T19:29:38.905Z"}
+{"level":"info","message":"Correo electrónico suscrito con éxito: barbosacamilo36@gmail.com","timestamp":"2024-11-18T19:29:38.910Z"}
